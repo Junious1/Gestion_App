@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gestion_app/pages/home.dart';
 // import 'package:gestion_app/components/button.dart';
 // import 'package:gestion_app/components/textfield.dart';
 
@@ -12,13 +13,12 @@ class login_page extends StatefulWidget {
 class _login_pageState extends State<login_page> {
   @override
   Widget build(BuildContext context) {
-    
     return GestureDetector(
       onTap: () => FocusScope.of(context).requestFocus(),
       child: Scaffold(
           backgroundColor: Colors.white,
           body: SingleChildScrollView(
-            physics:const  BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: SafeArea(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -81,7 +81,7 @@ class _login_pageState extends State<login_page> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(
-                                    color: Color(0x00000000),
+                                    color: Color(0xFFF1691D),
                                     width: 2,
                                   ),
                                   borderRadius: BorderRadius.circular(25),
@@ -123,8 +123,8 @@ class _login_pageState extends State<login_page> {
                               decoration: InputDecoration(
                                 labelText: 'Password',
                                 hintText: 'Mot de passe ',
-                                hintStyle:
-                                    const TextStyle(fontWeight: FontWeight.w300),
+                                hintStyle: const TextStyle(
+                                    fontWeight: FontWeight.w300),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(
                                     color: Color(0xFFCFCFCF),
@@ -134,7 +134,7 @@ class _login_pageState extends State<login_page> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(
-                                    color: Color(0x00000000),
+                                    color: Color(0xFFF1691D),
                                     width: 2,
                                   ),
                                   borderRadius: BorderRadius.circular(25),
@@ -147,7 +147,7 @@ class _login_pageState extends State<login_page> {
                                   borderRadius: BorderRadius.circular(25),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
-                                  borderSide:const BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.red,
                                     width: 2,
                                   ),
@@ -186,10 +186,14 @@ class _login_pageState extends State<login_page> {
                                   300, 10, 20, 20),
                               child: ElevatedButton(
                                 onPressed: () {
-                                  print('Button pressed ...');
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => home()));
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  minimumSize: const Size(100, 45), backgroundColor: const Color(0xFFF1691D),
+                                  minimumSize: const Size(100, 45),
+                                  backgroundColor: const Color(0xFFF1691D),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25),
                                   ),
