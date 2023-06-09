@@ -13,6 +13,7 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return GestureDetector(
       // onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
       child: Scaffold(
@@ -24,8 +25,8 @@ class _homeState extends State<home> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: 180,
-                height: 805,
+                width: size.width * 0.2,
+                height: size.height,
                 decoration: BoxDecoration(
                   color: Color(0xFFCACBC9),
                   shape: BoxShape.rectangle,
@@ -171,8 +172,8 @@ class _homeState extends State<home> {
                 ),
               ),
               Container(
-                width: 901,
-                height: 819,
+                width: MediaQuery.of(context).size.width * 0.80,
+                height: size.height,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(0),
@@ -373,7 +374,7 @@ class _homeState extends State<home> {
                                   print('Button pressed ...');
                                 },
                                 text: 'Button',
-                                options: FFButtonOptions(
+                                options: const FFButtonOptions(
                                   width: 100,
                                   height: 40,
                                   padding: EdgeInsetsDirectional.fromSTEB(
