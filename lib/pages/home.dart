@@ -49,7 +49,7 @@ class _homeState extends State<home> {
                             Icons.person,
                             size: 15,
                           ),
-                          options: FFButtonOptions(
+                          options: const FFButtonOptions(
                             width: 130,
                             height: 40,
                             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
@@ -85,7 +85,7 @@ class _homeState extends State<home> {
                             Icons.perm_contact_cal,
                             size: 15,
                           ),
-                          options: FFButtonOptions(
+                          options: const FFButtonOptions(
                             height: 40,
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
@@ -116,7 +116,7 @@ class _homeState extends State<home> {
                             Icons.settings_sharp,
                             size: 15,
                           ),
-                          options: FFButtonOptions(
+                          options: const FFButtonOptions(
                             width: 130,
                             height: 40,
                             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
@@ -147,7 +147,7 @@ class _homeState extends State<home> {
                             Icons.person,
                             size: 15,
                           ),
-                          options: FFButtonOptions(
+                          options: const FFButtonOptions(
                             width: 130,
                             height: 40,
                             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
@@ -197,7 +197,7 @@ class _homeState extends State<home> {
                               decoration: BoxDecoration(
                                 color: Colors.white,
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(10, 5, 0, 0),
                                 child: Text(
@@ -215,7 +215,7 @@ class _homeState extends State<home> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       10, 3, 0, 0),
                                   child: Text(
@@ -237,7 +237,7 @@ class _homeState extends State<home> {
                                       print('Button pressed ...');
                                     },
                                     text: 'Ajoutez',
-                                    options: FFButtonOptions(
+                                    options: const FFButtonOptions(
                                       width: 100,
                                       height: 30,
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -273,7 +273,7 @@ class _homeState extends State<home> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text(
+                            const Text(
                               'Tous les clients',
                               style: TextStyle(
                                 fontFamily: 'Poppins',
@@ -346,7 +346,7 @@ class _homeState extends State<home> {
                                   print('Button pressed ...');
                                 },
                                 text: 'Button',
-                                options: FFButtonOptions(
+                                options: const FFButtonOptions(
                                   width: 100,
                                   height: 40,
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -408,7 +408,7 @@ class _homeState extends State<home> {
                               color: Color(0xFFCACBC9),
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            child: Row(
+                            child: const Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
