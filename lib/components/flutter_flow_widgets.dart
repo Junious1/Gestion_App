@@ -4,6 +4,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 
 class FFButtonOptions {
   const FFButtonOptions({
+    this.borderRadius2,
     this.textStyle,
     this.elevation,
     this.height,
@@ -33,6 +34,7 @@ class FFButtonOptions {
   final Color? iconColor;
   final EdgeInsetsGeometry? iconPadding;
   final double? borderRadius;
+  final BorderRadius? borderRadius2;
   final BorderSide? borderSide;
 }
 
@@ -101,8 +103,7 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
     ButtonStyle style = ButtonStyle(
       shape: MaterialStateProperty.all<OutlinedBorder>(
         RoundedRectangleBorder(
-          borderRadius:
-              BorderRadius.circular(widget.options.borderRadius ?? 8.0),
+          borderRadius:  widget.options.borderRadius2?? BorderRadius.circular(widget.options.borderRadius ?? 8),
           side: widget.options.borderSide ?? BorderSide.none,
         ),
       ),
