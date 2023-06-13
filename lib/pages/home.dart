@@ -10,6 +10,7 @@ class home extends StatefulWidget {
   State<home> createState() => _homeState();
 }
 
+
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class _homeState extends State<home> {
       // onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
       child: Scaffold(
         // key: scaffoldKey,
-        backgroundColor: Color(0xFFCACBC9),
+        backgroundColor: const Color(0xFFCACBC9),
         body: SafeArea(
           top: true,
           child: Row(
@@ -27,25 +28,26 @@ class _homeState extends State<home> {
               Container(
                 width: size.width * 0.2,
                 height: size.height,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xFFCACBC9),
                   shape: BoxShape.rectangle,
                 ),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+                        padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
                         child: FFButtonWidget(
                           onPressed: () {
+                            // ignore: avoid_print
                             print('Button pressed ...');
                           },
                           text: 'Mes clients',
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.person,
                             size: 15,
                           ),
@@ -75,13 +77,14 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+                        padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
                         child: FFButtonWidget(
                           onPressed: () {
+                            // ignore: avoid_print
                             print('Button pressed ...');
                           },
                           text: 'Planning',
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.perm_contact_cal,
                             size: 15,
                           ),
@@ -106,13 +109,14 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+                        padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
                         child: FFButtonWidget(
                           onPressed: () {
+                            // ignore: avoid_print
                             print('Button pressed ...');
                           },
                           text: 'Parametres',
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.settings_sharp,
                             size: 15,
                           ),
@@ -137,13 +141,14 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                         child: FFButtonWidget(
                           onPressed: () {
+                            // ignore: avoid_print
                             print('Button pressed ...');
                           },
                           text: 'Mon compte',
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.person,
                             size: 15,
                           ),
@@ -185,7 +190,7 @@ class _homeState extends State<home> {
                       Container(
                         width: 837,
                         height: 81,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                         ),
                         child: Column(
@@ -194,7 +199,7 @@ class _homeState extends State<home> {
                             Container(
                               width: 842,
                               height: 36,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.white,
                               ),
                               child: const Padding(
@@ -230,10 +235,11 @@ class _homeState extends State<home> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0, 0, 10, 0),
                                   child: FFButtonWidget(
                                     onPressed: () {
+                                      // ignore: avoid_print
                                       print('Button pressed ...');
                                     },
                                     text: 'Ajoutez',
@@ -266,7 +272,7 @@ class _homeState extends State<home> {
                       Container(
                         width: 837,
                         height: 30,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                         ),
                         child: Row(
@@ -282,7 +288,7 @@ class _homeState extends State<home> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     100, 0, 50, 0),
                                 child: TextFormField(
                                   // controller: _model.textController,
@@ -291,40 +297,40 @@ class _homeState extends State<home> {
                                   decoration: InputDecoration(
                                     hintText: 'Recherche',
                                     hintStyle:
-                                        TextStyle(fontWeight: FontWeight.w200),
+                                        const TextStyle(fontWeight: FontWeight.w200),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFA9A6A6),
                                         width: 1,
                                       ),
                                       borderRadius: BorderRadius.circular(25),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1,
                                       ),
                                       borderRadius: BorderRadius.circular(25),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1,
                                       ),
                                       borderRadius: BorderRadius.circular(25),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1,
                                       ),
                                       borderRadius: BorderRadius.circular(25),
                                     ),
-                                    suffixIcon: Icon(
+                                    suffixIcon: const Icon(
                                       Icons.search,
                                     ),
                                   ),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontFamily: 'Poppins',
                                     fontSize: 12,
                                   ),
@@ -340,9 +346,10 @@ class _homeState extends State<home> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
                               child: FFButtonWidget(
                                 onPressed: () {
+                                  // ignore: avoid_print
                                   print('Button pressed ...');
                                 },
                                 text: 'Button',
@@ -368,9 +375,10 @@ class _homeState extends State<home> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
                               child: FFButtonWidget(
                                 onPressed: () {
+                                  // ignore: avoid_print
                                   print('Button pressed ...');
                                 },
                                 text: 'Button',
@@ -398,14 +406,14 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0, 0),
+                        alignment: const AlignmentDirectional(0, 0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                           child: Container(
                             width: 820,
                             height: 40,
                             decoration: BoxDecoration(
-                              color: Color(0xFFCACBC9),
+                              color: const Color(0xFFCACBC9),
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: const Row(
@@ -459,7 +467,7 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Container(
                           width: 820,
                           height: 45,
@@ -467,7 +475,7 @@ class _homeState extends State<home> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
-                              color: Color(0xFD101213),
+                              color: const Color(0xFD101213),
                             ),
                           ),
                           child: const Row(
