@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gestion_app/pages/add_client.dart';
 
 import '../components/flutter_flow_widgets.dart';
 
@@ -9,7 +10,6 @@ class home extends StatefulWidget {
   @override
   State<home> createState() => _homeState();
 }
-
 
 class _homeState extends State<home> {
   @override
@@ -40,7 +40,8 @@ class _homeState extends State<home> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
                         child: FFButtonWidget(
                           onPressed: () {
                             // ignore: avoid_print
@@ -77,7 +78,8 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
                         child: FFButtonWidget(
                           onPressed: () {
                             // ignore: avoid_print
@@ -109,7 +111,8 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
                         child: FFButtonWidget(
                           onPressed: () {
                             // ignore: avoid_print
@@ -141,7 +144,8 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                         child: FFButtonWidget(
                           onPressed: () {
                             // ignore: avoid_print
@@ -239,8 +243,11 @@ class _homeState extends State<home> {
                                       0, 0, 10, 0),
                                   child: FFButtonWidget(
                                     onPressed: () {
-                                      // ignore: avoid_print
-                                      print('Button pressed ...');
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  add_client()));
                                     },
                                     text: 'Ajoutez',
                                     options: const FFButtonOptions(
@@ -296,8 +303,8 @@ class _homeState extends State<home> {
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     hintText: 'Recherche',
-                                    hintStyle:
-                                        const TextStyle(fontWeight: FontWeight.w200),
+                                    hintStyle: const TextStyle(
+                                        fontWeight: FontWeight.w200),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: const BorderSide(
                                         color: Color(0xFFA9A6A6),
@@ -345,8 +352,8 @@ class _homeState extends State<home> {
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 20, 0),
                               child: FFButtonWidget(
                                 onPressed: () {
                                   // ignore: avoid_print
@@ -374,8 +381,8 @@ class _homeState extends State<home> {
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 20, 0),
                               child: FFButtonWidget(
                                 onPressed: () {
                                   // ignore: avoid_print
@@ -408,7 +415,8 @@ class _homeState extends State<home> {
                       Align(
                         alignment: const AlignmentDirectional(0, 0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                           child: Container(
                             width: 820,
                             height: 40,
@@ -467,7 +475,8 @@ class _homeState extends State<home> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Container(
                           width: 820,
                           height: 45,

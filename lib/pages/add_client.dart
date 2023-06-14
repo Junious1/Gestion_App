@@ -1,6 +1,6 @@
 import '../components/NavBar.dart';
 import 'package:flutter/material.dart';
-
+import '../components/Field.dart';
 import '../components/flutter_flow_widgets.dart';
 
 class add_client extends StatefulWidget {
@@ -62,7 +62,8 @@ class _add_clientState extends State<add_client> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 20, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0, 20, 20, 0),
                           child: FFButtonWidget(
                             onPressed: () {
                               print('Button pressed ...');
@@ -166,6 +167,7 @@ class _add_clientState extends State<add_client> {
                         ],
                       ),
                     ),
+                    Add_textfield(inputext: "Nom du gerant")
                   ],
                 ),
               ),

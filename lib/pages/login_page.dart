@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gestion_app/pages/add_client.dart';
 import 'package:gestion_app/pages/home.dart';
-// import 'package:gestion_app/components/button.dart';
-// import 'package:gestion_app/components/textfield.dart';
 
 class login_page extends StatefulWidget {
   const login_page({super.key});
@@ -190,7 +187,7 @@ class _login_pageState extends State<login_page> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => add_client()));
+                                          builder: (context) => home()));
                                 },
                                 style: ElevatedButton.styleFrom(
                                   minimumSize: const Size(100, 45),
