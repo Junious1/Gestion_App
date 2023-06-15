@@ -187,7 +187,7 @@ class _login_pageState extends State<login_page> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => home()));
+                                          builder: (context) => Home()));
                                 },
                                 style: ElevatedButton.styleFrom(
                                   minimumSize: const Size(100, 45),

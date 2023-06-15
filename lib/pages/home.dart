@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gestion_app/components/NavBar.dart';
 import 'package:gestion_app/pages/add_client.dart';
 
 import '../components/flutter_flow_widgets.dart';
 
-class home extends StatefulWidget {
-  const home({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<home> createState() => _homeState();
+  State<Home> createState() => _HomeState();
 }
 
-class _homeState extends State<home> {
+enum SampleItem { itemOne, itemTwo, itemThree }
+
+SampleItem? selectedMenu;
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,159 +31,7 @@ class _homeState extends State<home> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: size.width * 0.2,
-                height: size.height,
-                decoration: const BoxDecoration(
-                  color: Color(0xFFCACBC9),
-                  shape: BoxShape.rectangle,
-                ),
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            // ignore: avoid_print
-                            print('Button pressed ...');
-                          },
-                          text: 'Mes clients',
-                          icon: const Icon(
-                            Icons.person,
-                            size: 15,
-                          ),
-                          options: const FFButtonOptions(
-                            width: 130,
-                            height: 40,
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                            iconPadding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                            color: Colors.white,
-                            textStyle: TextStyle(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFFF1691D),
-                              fontWeight: FontWeight.bold,
-                            ),
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 0,
-                            ),
-                            // borderRadius: BorderRadius.only(
-                            //   bottomLeft: Radius.circular(50),
-                            //   bottomRight: Radius.circular(0),
-                            //   topLeft: Radius.circular(50),
-                            //   topRight: Radius.circular(0),
-                            // ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            // ignore: avoid_print
-                            print('Button pressed ...');
-                          },
-                          text: 'Planning',
-                          icon: const Icon(
-                            Icons.perm_contact_cal,
-                            size: 15,
-                          ),
-                          options: const FFButtonOptions(
-                            height: 40,
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
-                            iconPadding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                            color: Color(0xFFCACBC9),
-                            textStyle: TextStyle(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFD000000),
-                              fontWeight: FontWeight.bold,
-                            ),
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 0,
-                            ),
-                            borderRadius: 0,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            // ignore: avoid_print
-                            print('Button pressed ...');
-                          },
-                          text: 'Parametres',
-                          icon: const Icon(
-                            Icons.settings_sharp,
-                            size: 15,
-                          ),
-                          options: const FFButtonOptions(
-                            width: 130,
-                            height: 40,
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                            iconPadding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                            color: Color(0xFFCACBC9),
-                            textStyle: TextStyle(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFD000000),
-                              fontWeight: FontWeight.bold,
-                            ),
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 0,
-                            ),
-                            borderRadius: 0,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            // ignore: avoid_print
-                            print('Button pressed ...');
-                          },
-                          text: 'Mon compte',
-                          icon: const Icon(
-                            Icons.person,
-                            size: 15,
-                          ),
-                          options: const FFButtonOptions(
-                            width: 130,
-                            height: 40,
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                            iconPadding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                            color: Color(0xFFCACBC9),
-                            textStyle: TextStyle(
-                              fontFamily: 'Poppins',
-                              color: Color(0xFD000000),
-                              fontWeight: FontWeight.bold,
-                            ),
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 0,
-                            ),
-                            borderRadius: 0,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                child: NavBar(),
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.80,
@@ -192,8 +45,8 @@ class _homeState extends State<home> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Container(
-                        width: 837,
-                        height: 81,
+                        width: 840,
+                        height: 85,
                         decoration: const BoxDecoration(
                           color: Colors.white,
                         ),
@@ -247,7 +100,7 @@ class _homeState extends State<home> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  add_client()));
+                                                  Addclient()));
                                     },
                                     text: 'Ajoutez',
                                     options: const FFButtonOptions(
@@ -418,60 +271,79 @@ class _homeState extends State<home> {
                           padding:
                               const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                           child: Container(
-                            width: 820,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFCACBC9),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: const Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Align(
-                                  alignment: AlignmentDirectional(-1, 0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        30, 0, 0, 0),
-                                    child: Text(
-                                      'Code client',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.normal),
+                              width: 820,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFCACBC9),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child:
+                                  const // Generated code for this Row Widget...
+                                  Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Align(
+                                    alignment: AlignmentDirectional(-1, 0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          30, 0, 0, 0),
+                                      child: Text(
+                                        "Code Client",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w600),
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Text(
-                                  'Nom du gerant ',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.normal),
-                                ),
-                                Text(
-                                  'Nom du local',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.normal),
-                                ),
-                                Text(
-                                  'Contacts',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.normal),
-                                ),
-                                Text(
-                                  'Lieu',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.normal),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 30, 0),
-                                  child: Text(
-                                    'Créance ',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.normal),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 20, 0),
+                                    child: Text(
+                                      "Nom du Gerant",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 25, 0),
+                                    child: Text(
+                                      "Nom du Local",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 25, 0),
+                                    child: Text(
+                                      "Contacts",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 35, 0),
+                                    child: Text(
+                                      "Lieu",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 75, 0),
+                                    child: Text(
+                                      "Créance ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ),
+                                ],
+                              )),
                         ),
                       ),
                       Padding(
@@ -487,40 +359,65 @@ class _homeState extends State<home> {
                               color: const Color(0xFD101213),
                             ),
                           ),
-                          child: const Row(
+                          child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
                                 child: Text('Hello World',
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal)),
                               ),
-                              Text(
+                              const Text(
                                 'Hello World',
                                 style: TextStyle(fontWeight: FontWeight.normal),
                               ),
-                              Text(
+                              const Text(
                                 'Hello World',
                                 style: TextStyle(fontWeight: FontWeight.normal),
                               ),
-                              Text(
+                              const Text(
                                 'Hello World',
                                 style: TextStyle(fontWeight: FontWeight.normal),
                               ),
-                              Text(
+                              const Text(
                                 'Hello World',
                                 style: TextStyle(fontWeight: FontWeight.normal),
                               ),
-                              Align(
+                              const Align(
                                 alignment: AlignmentDirectional(0, 0),
                                 child: Text(
                                   'Hello World',
                                   style:
                                       TextStyle(fontWeight: FontWeight.normal),
                                 ),
+                              ),
+                              PopupMenuButton<SampleItem>(
+                                initialValue: selectedMenu,
+                                // Callback that sets the selected popup menu item.
+                                onSelected: (SampleItem item) {
+                                  setState(() {
+                                    selectedMenu = item;
+                                  });
+                                },
+                                itemBuilder: (BuildContext context) =>
+                                    <PopupMenuEntry<SampleItem>>[
+                                  const PopupMenuItem<SampleItem>(
+                                    value: SampleItem.itemOne,
+                                    child: Text('Item 1'),
+                                    
+                                  ),
+                                  const PopupMenuItem<SampleItem>(
+                                    value: SampleItem.itemTwo,
+                                    child: Text('Item 2'),
+                                  ),
+                                  const PopupMenuItem<SampleItem>(
+                                    value: SampleItem.itemThree,
+                                    child: Text('Item 3'),
+                                  ),
+                                ],
                               ),
                             ],
                           ),

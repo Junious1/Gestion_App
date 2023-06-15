@@ -1,17 +1,17 @@
-import '../components/NavBar.dart';
 import 'package:flutter/material.dart';
+
 import '../components/Field.dart';
+import '../components/NavBar.dart';
 import '../components/flutter_flow_widgets.dart';
 
-class Addclient extends StatefulWidget {
-  const Addclient({super.key});
+class UpdateInfoClienState extends StatefulWidget {
+  const UpdateInfoClienState({super.key});
 
   @override
-  State<Addclient> createState() => _AddclientState();
+  State<UpdateInfoClienState> createState() => _UpdateInfoClienStateState();
 }
 
-// ignore: camel_case_types
-class _AddclientState extends State<Addclient> {
+class _UpdateInfoClienStateState extends State<UpdateInfoClienState> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -54,7 +54,7 @@ class _AddclientState extends State<Addclient> {
                         const Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                           child: Text(
-                            "Ajout nouveau Client ",
+                            "Modification Compte Client ",
                             style: TextStyle(
                                 fontFamily: 'Poppins',
                                 fontSize: 18,
@@ -100,16 +100,11 @@ class _AddclientState extends State<Addclient> {
                             fontWeight: FontWeight.w600,
                           )),
                     ),
-                    const AddTextfield(inputext: "Nom du Local : "),
-                    const AddTextfield(inputext: "Nom du gérant : "),
-                    const AddTextfield(inputext: "Contact du gérant : "),
-                    const AddTextfield(inputext: "Nom du Propriétaire : "),
-                    const AddTextfield(
-                        inputext: "Nom du second Propriétaire : "),
-                    const AddTextfield(inputext: "Contact du Propriétaire : "),
-                    const AddTextfield(inputext: "Localisation : "),
-                    const AddTextfield(inputext: "Activités : "),
-                    const AddTextfield(inputext: "Photo du Local : "),
+                    const AddTextfield(inputext: "Nom du Produit  : "),
+                    const AddTextfield(inputext: "Etat du Produit : "),
+                    const AddTextfield(inputext: "Usage : "),
+                    const AddTextfield(inputext: "Frequence d'utilisation : "),
+                    const AddTextfield(inputext: "Pression : "),
                   ],
                 ),
               ),

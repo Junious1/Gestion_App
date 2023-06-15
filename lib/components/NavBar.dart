@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 import 'flutter_flow_widgets.dart';
 
 class NavBar extends StatelessWidget {
@@ -10,23 +8,23 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       width: 180,
-      height: 805,
+      height: size.height,
       decoration: const BoxDecoration(
         color: Color(0xFFCACBC9),
         shape: BoxShape.rectangle,
       ),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
+        padding: const EdgeInsetsDirectional.fromSTEB(0, 175, 0, 0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Padding(
-              padding:
-                  const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
               child: FFButtonWidget(
                 onPressed: () {
                   print('Button pressed ...');
@@ -40,8 +38,7 @@ class NavBar extends StatelessWidget {
                   width: 130,
                   height: 40,
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                  iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                  iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                   color: Colors.white,
                   textStyle: TextStyle(
                     fontFamily: 'Poppins',
@@ -74,10 +71,8 @@ class NavBar extends StatelessWidget {
                 ),
                 options: const FFButtonOptions(
                   height: 40,
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
-                  iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                  iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                   color: Color(0xFFCACBC9),
                   textStyle: TextStyle(
                     fontFamily: 'Poppins',
@@ -107,8 +102,7 @@ class NavBar extends StatelessWidget {
                   width: 130,
                   height: 40,
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                  iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                  iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                   color: Color(0xFFCACBC9),
                   textStyle: TextStyle(
                     fontFamily: 'Poppins',
@@ -138,8 +132,7 @@ class NavBar extends StatelessWidget {
                   width: 130,
                   height: 40,
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                  iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                  iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                   color: Color(0xFFCACBC9),
                   textStyle: TextStyle(
                     fontFamily: 'Poppins',
