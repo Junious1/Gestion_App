@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gestion_app/pages/login_page.dart';
+import 'package:gestion_app/pages/setting_user.dart';
 // import 'package:gestion_app/pages/login_page.dart';
 
 void main() {

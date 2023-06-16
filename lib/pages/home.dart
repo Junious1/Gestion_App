@@ -54,8 +54,8 @@ class _HomeState extends State<Home> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Container(
-                              width: 842,
-                              height: 36,
+                              width: 840,
+                              height: 35,
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                               ),
@@ -407,7 +407,6 @@ class _HomeState extends State<Home> {
                                   const PopupMenuItem<SampleItem>(
                                     value: SampleItem.itemOne,
                                     child: Text('Item 1'),
-                                    
                                   ),
                                   const PopupMenuItem<SampleItem>(
                                     value: SampleItem.itemTwo,
