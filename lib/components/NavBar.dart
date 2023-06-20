@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'flutter_flow_widgets.dart';
 
 class NavBar extends StatelessWidget {
@@ -31,7 +32,7 @@ class NavBar extends StatelessWidget {
                 },
                 text: 'Mes clients',
                 icon: const Icon(
-                  Icons.person,
+                  FontAwesomeIcons.solidUser,
                   size: 15,
                 ),
                 options: const FFButtonOptions(
@@ -66,7 +67,7 @@ class NavBar extends StatelessWidget {
                 },
                 text: 'Planning',
                 icon: const Icon(
-                  Icons.perm_contact_cal,
+                  FontAwesomeIcons.calendar,
                   size: 15,
                 ),
                 options: const FFButtonOptions(
@@ -93,9 +94,9 @@ class NavBar extends StatelessWidget {
                 onPressed: () {
                   print('Button pressed ...');
                 },
-                text: 'Parametres',
+                text: 'Localisation',
                 icon: const Icon(
-                  Icons.settings_sharp,
+                  FontAwesomeIcons.locationDot,
                   size: 15,
                 ),
                 options: const FFButtonOptions(
@@ -123,9 +124,9 @@ class NavBar extends StatelessWidget {
                 onPressed: () {
                   print('Button pressed ...');
                 },
-                text: 'Mon compte',
+                text: 'Paramètres',
                 icon: const Icon(
-                  Icons.person,
+                  FontAwesomeIcons.gear,
                   size: 15,
                 ),
                 options: const FFButtonOptions(

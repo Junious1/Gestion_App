@@ -4,14 +4,14 @@ import '../components/Field.dart';
 import '../components/NavBar.dart';
 import '../components/flutter_flow_widgets.dart';
 
-class UpdateInfoClienState extends StatefulWidget {
-  const UpdateInfoClienState({super.key});
+class UpdateInfoProfuit extends StatefulWidget {
+  const UpdateInfoProfuit({super.key});
 
   @override
-  State<UpdateInfoClienState> createState() => _UpdateInfoClienStateState();
+  State<UpdateInfoProfuit> createState() => _UpdateInfoProfuitState();
 }
 
-class _UpdateInfoClienStateState extends State<UpdateInfoClienState> {
+class _UpdateInfoProfuitState extends State<UpdateInfoProfuit> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
