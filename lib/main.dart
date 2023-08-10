@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gestion_app/pages/login_page.dart';
 import 'package:gestion_app/pages/modif_compte_client.dart';
 // import 'package:gestion_app/pages/login_page.dart';
 

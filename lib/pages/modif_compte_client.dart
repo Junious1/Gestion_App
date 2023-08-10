@@ -153,7 +153,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                             iconPadding:
                                                 const EdgeInsetsDirectional
                                                     .fromSTEB(0, 0, 0, 0),
-                                            color: Color(0xFFF1691D),
+                                            color: const Color(0xFFF1691D),
                                             textStyle: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.normal,
                                                 color: Config
@@ -321,7 +321,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                   ),
                                   child: Card(
                                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: Color(0xFFF1F1EF),
+                                    color: const Color(0xFFF1F1EF),
                                     elevation: 4,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8),
@@ -387,7 +387,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(-0.85, 1),
+                                              const AlignmentDirectional(-0.85, 1),
                                           child: Text('Usage',
                                               style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.w500,
@@ -399,7 +399,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(-1, 0),
+                                  alignment: const AlignmentDirectional(-1, 0),
                                   child: Container(
                                     width: 225,
                                     height: 180,
@@ -408,7 +408,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                     ),
                                     child: Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      color: Color(0xFFF1F1EF),
+                                      color: const Color(0xFFF1F1EF),
                                       elevation: 4,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(8),
@@ -431,12 +431,12 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                                 text: 'Mauvais Etat',
                                                 options: FFButtonOptions(
                                                   height: 30,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(10, 0, 10, 0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0, 0, 0, 0),
-                                                  color: Color(0xFFC80707),
+                                                  color: const Color(0xFFC80707),
                                                   textStyle:
                                                       GoogleFonts.poppins(
                                                           fontWeight:
@@ -445,7 +445,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                                           color: Config.colors
                                                               .backgroundColor),
                                                   elevation: 0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1,
                                                   ),
@@ -456,7 +456,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                           ),
                                           Flexible(
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -0.85, 1),
                                               child: Text(
                                                   "Nom de l'equipement ",
@@ -467,7 +467,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                           ),
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(-0.85, 1),
+                                                const AlignmentDirectional(-0.85, 1),
                                             child: Text('Marque',
                                                 style: GoogleFonts.poppins(
                                                     fontWeight: FontWeight.w500,
@@ -475,7 +475,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                           ),
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(-0.85, 1),
+                                                const AlignmentDirectional(-0.85, 1),
                                             child: Text('Usage',
                                                 style: GoogleFonts.poppins(
                                                     fontWeight: FontWeight.w500,
@@ -493,20 +493,20 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                       color: Config.colors.backgroundColor),
                                   child: Card(
                                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: Color(0xFFF1F1EF),
+                                    color: const Color(0xFFF1F1EF),
                                     elevation: 4,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     child: Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment: const AlignmentDirectional(0, 0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Flexible(
                                             child: Align(
                                               alignment:
-                                                  AlignmentDirectional(0, 0),
+                                                  const AlignmentDirectional(0, 0),
                                               child: IconButton(
                                                 iconSize: 40,
                                                 icon: FaIcon(
