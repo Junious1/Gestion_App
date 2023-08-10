@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                child: NavBar(),
+                child: const NavBar(),
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.80,
@@ -100,7 +100,7 @@ class _HomeState extends State<Home> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  Addclient()));
+                                                  const Addclient()));
                                     },
                                     text: 'Ajoutez',
                                     options: const FFButtonOptions(

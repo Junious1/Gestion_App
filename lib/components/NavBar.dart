@@ -60,7 +60,7 @@ class NavBar extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
               child: FFButtonWidget(
                 onPressed: () {
                   print('Button pressed ...');
@@ -89,7 +89,7 @@ class NavBar extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
+              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
               child: FFButtonWidget(
                 onPressed: () {
                   print('Button pressed ...');
@@ -119,7 +119,7 @@ class NavBar extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
               child: FFButtonWidget(
                 onPressed: () {
                   print('Button pressed ...');

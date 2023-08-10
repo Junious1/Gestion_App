@@ -15,7 +15,7 @@ class AddTextfield extends StatelessWidget {
           children: [
             if (inputext != null)
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                 child: Text(inputext!,
                     style: const TextStyle(
                       fontSize: 16,
@@ -61,11 +61,11 @@ class AddTextfield extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25),
                     ),
                     filled: true,
-                    fillColor: Color(0xFFCACBC9),
+                    fillColor: const Color(0xFFCACBC9),
                     contentPadding:
                         const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                   ),
-                  style: TextStyle(fontWeight: FontWeight.normal),
+                  style: const TextStyle(fontWeight: FontWeight.normal),
                   // validator: controller,
                 ),
               ),

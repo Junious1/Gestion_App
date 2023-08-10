@@ -8,14 +8,14 @@ class InfoClient extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0, 0),
+      alignment: const AlignmentDirectional(0, 0),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+        padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
         child: Container(
           width: 820,
           height: 40,
           decoration: BoxDecoration(
-            color: Color(0xFFCACBC9),
+            color: const Color(0xFFCACBC9),
             borderRadius: BorderRadius.circular(15),
           ),
           child: const Row(
@@ -73,7 +73,7 @@ class functionInfoClient extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
       child: Container(
         width: 820,
         height: 45,
@@ -81,7 +81,7 @@ class functionInfoClient extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
           border: Border.all(
-            color: Color(0xFD101213),
+            color: const Color(0xFD101213),
           ),
         ),
         child: const Row(

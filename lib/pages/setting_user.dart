@@ -20,7 +20,7 @@ class _SettingUserState extends State<SettingUser> {
               top: true,
               child: Row(mainAxisSize: MainAxisSize.max, children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 150, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 150, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -40,7 +40,7 @@ class _SettingUserState extends State<SettingUser> {
                       Container(
                         width: 900,
                         height: 810,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                         ),
                         child: const Column(
