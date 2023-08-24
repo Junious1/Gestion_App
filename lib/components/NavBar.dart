@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gestion_app/pages/home.dart';
+import 'package:gestion_app/pages/setting_user.dart';
 import 'flutter_flow_widgets.dart';
 
 class NavBar extends StatelessWidget {
@@ -28,7 +30,8 @@ class NavBar extends StatelessWidget {
               padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 5),
               child: FFButtonWidget(
                 onPressed: () {
-                  print('Button pressed ...');
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => const Home()));
                 },
                 text: 'Mes clients',
                 icon: const Icon(
@@ -122,7 +125,10 @@ class NavBar extends StatelessWidget {
               padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
               child: FFButtonWidget(
                 onPressed: () {
-                  print('Button pressed ...');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SettingUser()));
                 },
                 text: 'Paramètres',
                 icon: const Icon(

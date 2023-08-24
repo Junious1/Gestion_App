@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gestion_app/pages/affichageClient.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../components/Config.dart';
 import '../components/NavBar.dart';
@@ -143,7 +144,7 @@ class _ModifClientWidgetState extends State<ModifClientWidget> {
                                             .fromSTEB(0, 0, 20, 0),
                                         child: FFButtonWidget(
                                           onPressed: () {
-                                            print('Button pressed ...');
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => const AffichageClientWidget() ));
                                           },
                                           text: 'Enregistrer',
                                           options: FFButtonOptions(

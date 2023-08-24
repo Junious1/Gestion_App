@@ -64,12 +64,17 @@ class InfoClient extends StatelessWidget {
 }
 
 //fonction information Client
+class FunInfoClient extends StatefulWidget {
+  const FunInfoClient({super.key});
 
-class functionInfoClient extends StatelessWidget {
-  const functionInfoClient({
-    super.key,
-  });
+  @override
+  State<FunInfoClient> createState() => _FunInfoClientState();
+}
+enum SampleItem { itemOne, itemTwo, itemThree }
 
+SampleItem? selectedMenu;
+
+class _FunInfoClientState extends State<FunInfoClient> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -84,36 +89,65 @@ class functionInfoClient extends StatelessWidget {
             color: const Color(0xFD101213),
           ),
         ),
-        child: const Row(
+        child:  Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
               child: Text(
-                'Hello World',
+                '012568987',
                 style: TextStyle(fontWeight: FontWeight.normal),
               ),
             ),
-            Text(
-              'Hello World',
+            const Text(
+              'KONAN Jean..',
               style: TextStyle(fontWeight: FontWeight.normal),
             ),
-            Text(
-              'Hello World',
+            const Text(
+              'Lavages des P..',
               style: TextStyle(fontWeight: FontWeight.normal),
             ),
-            Text(
-              'Hello World',
+            const Text(
+              '0708091011',
               style: TextStyle(fontWeight: FontWeight.normal),
             ),
-            Text(
-              'Hello World',
+            const Text(
+              'Angré 7eme..',
               style: TextStyle(fontWeight: FontWeight.normal),
             ),
-            Text(
-              '0',
-              style: TextStyle(fontWeight: FontWeight.normal),
+            const Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Text(
+                '0',
+                style:
+                TextStyle(fontWeight: FontWeight.normal),
+              ),
+            ),
+            PopupMenuButton<SampleItem>(
+              initialValue: selectedMenu,
+              // Callback that sets the selected popup menu item.
+              onSelected: (SampleItem item) {
+                setState(() {
+                  selectedMenu = item;
+                });
+              },
+              itemBuilder: (BuildContext context) =>
+              <PopupMenuEntry<SampleItem>>[
+                const PopupMenuItem<SampleItem>(
+                  value: SampleItem.itemOne,
+                  child: Text('Afficher'),
+
+                ),
+                const PopupMenuItem<SampleItem>(
+                  value: SampleItem.itemTwo,
+                  child: Text('Modifier'),
+                ),
+                const PopupMenuItem<SampleItem>(
+                  value: SampleItem.itemThree,
+                  child: Text('Supprimer'),
+                ),
+              ],
             ),
           ],
         ),
@@ -121,3 +155,5 @@ class functionInfoClient extends StatelessWidget {
     );
   }
 }
+
+

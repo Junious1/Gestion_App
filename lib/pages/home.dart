@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gestion_app/components/Client.dart';
 import 'package:gestion_app/components/NavBar.dart';
 import 'package:gestion_app/pages/add_client.dart';
 
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
           child: Row(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Container(
+               Container(
                 child: const NavBar(),
               ),
               Container(
@@ -212,7 +213,7 @@ class _HomeState extends State<Home> {
                                   // ignore: avoid_print
                                   print('Button pressed ...');
                                 },
-                                text: 'Button',
+                                text: '1 Janvier 2023',
                                 options: const FFButtonOptions(
                                   width: 100,
                                   height: 40,
@@ -241,7 +242,7 @@ class _HomeState extends State<Home> {
                                   // ignore: avoid_print
                                   print('Button pressed ...');
                                 },
-                                text: 'Button',
+                                text: '15 Juillet 2023',
                                 options: const FFButtonOptions(
                                   width: 100,
                                   height: 40,
@@ -366,30 +367,30 @@ class _HomeState extends State<Home> {
                               const Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
-                                child: Text('Hello World',
+                                child: Text('012568987',
                                     style: TextStyle(
                                         fontWeight: FontWeight.normal)),
                               ),
                               const Text(
-                                'Hello World',
+                                'KONAN Jean..',
                                 style: TextStyle(fontWeight: FontWeight.normal),
                               ),
                               const Text(
-                                'Hello World',
+                                'Lavages des P..',
                                 style: TextStyle(fontWeight: FontWeight.normal),
                               ),
                               const Text(
-                                'Hello World',
+                                '0708091011',
                                 style: TextStyle(fontWeight: FontWeight.normal),
                               ),
                               const Text(
-                                'Hello World',
+                                'Angré 7eme..',
                                 style: TextStyle(fontWeight: FontWeight.normal),
                               ),
                               const Align(
                                 alignment: AlignmentDirectional(0, 0),
                                 child: Text(
-                                  'Hello World',
+                                  '0',
                                   style:
                                       TextStyle(fontWeight: FontWeight.normal),
                                 ),
@@ -404,17 +405,17 @@ class _HomeState extends State<Home> {
                                 },
                                 itemBuilder: (BuildContext context) =>
                                     <PopupMenuEntry<SampleItem>>[
-                                  const PopupMenuItem<SampleItem>(
+                                   const PopupMenuItem<SampleItem>(
                                     value: SampleItem.itemOne,
-                                    child: Text('Item 1'),
+                                    child: Text('Afficher'),
                                   ),
                                   const PopupMenuItem<SampleItem>(
                                     value: SampleItem.itemTwo,
-                                    child: Text('Item 2'),
+                                    child: Text('Modifier'),
                                   ),
                                   const PopupMenuItem<SampleItem>(
                                     value: SampleItem.itemThree,
-                                    child: Text('Item 3'),
+                                    child: Text('Supprimer'),
                                   ),
                                 ],
                               ),
@@ -422,6 +423,13 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
+                    const FunInfoClient(),
+                      const FunInfoClient(),
+                      const FunInfoClient(),
+                      const FunInfoClient(),
+                      const FunInfoClient(),
+                      const FunInfoClient(),
+                      const FunInfoClient(),
                     ],
                   ),
                 ),

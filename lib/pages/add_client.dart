@@ -93,7 +93,7 @@ class _AddclientState extends State<Addclient> {
                     ),
                     const Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 30),
-                      child: Text("Veuillez rensigner ce formulaire...",
+                      child: Text("Veuillez renseigner ce formulaire...",
                           style: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 18,
