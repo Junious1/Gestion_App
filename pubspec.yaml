@@ -47,7 +47,7 @@ dependencies:
   intl: ^0.18.1
   json_path: ^0.6.0
   timeago: ^3.4.0
-  flutter_map: ^5.0.0
+  firebase_storage: ^11.2.6
 
 dev_dependencies:
   flutter_test:
