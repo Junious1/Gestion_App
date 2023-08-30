@@ -1,15 +1,14 @@
-//Initialisation de la classe User qui nous permettra de s'authentifier 
+//Initialisation de la classe User qui nous permettra de s'authentifier
 
 class Users {
-  String? idUtilisateur, motdePasse;
+  String? idUtilisateur;
 
   Users({
     this.idUtilisateur,
-    this.motdePasse,
   });
 }
 
-//Initialisation de la Classe Agent 
+//Initialisation de la Classe Agent
 class Agent extends Users {
   String? nomUtilisateur, prenomUtilisateur, numerodeTel, adresseMail;
 
@@ -21,12 +20,4 @@ class Agent extends Users {
 }
 
 //Initialisation de la Classe Administrateur
-class Admin extends Users {
-  String? nomUtilisateur, prenomUtilisateur, numerodeTel, adresseMail;
-
-  Admin(
-      {this.nomUtilisateur,
-      this.prenomUtilisateur,
-      this.adresseMail,
-      this.numerodeTel});
-}
+class Admin extends Users {}

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../components/Config.dart';
+import '../config/Config.dart';
 import '../components/NavBar.dart';
 import '../components/flutter_flow_widgets.dart';
 import 'modif_compte_client.dart';

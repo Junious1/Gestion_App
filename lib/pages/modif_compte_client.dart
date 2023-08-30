@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gestion_app/pages/affichageClient.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../components/Config.dart';
+import '../config/Config.dart';
 import '../components/NavBar.dart';
 import '../components/flutter_flow_widgets.dart';
 

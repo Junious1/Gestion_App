@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gestion_app/pages/home.dart';
+import 'package:gestion_app/services/authentification.dart';
 
 class login_page extends StatefulWidget {
   const login_page({super.key});
@@ -9,6 +10,7 @@ class login_page extends StatefulWidget {
 }
 
 class _login_pageState extends State<login_page> {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -183,11 +185,19 @@ class _login_pageState extends State<login_page> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   300, 10, 20, 20),
                               child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => const Home()));
+                                onPressed: () async {
+                                  dynamic result = await _auth.SignInAnom();
+                                  if (result == null) {
+                                    print('Erreur lors de la connexion');
+                                  } else {
+                                    print('Connexion réussite ');
+                                    print(result);
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Home()));
+                                  }
                                 },
                                 style: ElevatedButton.styleFrom(
                                   minimumSize: const Size(100, 45),

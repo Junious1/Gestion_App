@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:gestion_app/model/clientmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:gestion_app/model/usersmodel.dart';
 
 class DatabaseService {
   // déclaration et initialisation
@@ -52,5 +54,10 @@ class DatabaseService {
             creance: doc.get("creance"));
       }).toList();
     });
+  }
+
+  //Fonction Récupération des ID de l'utilisateur
+  Users? _userFromFirebase(User users) {
+    return users != null ? Users(idUtilisateur: users.email) : null;
   }
 }

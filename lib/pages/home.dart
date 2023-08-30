@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gestion_app/components/Client.dart';
 import 'package:gestion_app/components/NavBar.dart';
+import 'package:gestion_app/config/Config.dart';
 import 'package:gestion_app/pages/add_client.dart';
 
 import '../components/flutter_flow_widgets.dart';
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
           child: Row(
             mainAxisSize: MainAxisSize.max,
             children: [
-               Container(
+              Container(
                 child: const NavBar(),
               ),
               Container(
@@ -104,20 +105,21 @@ class _HomeState extends State<Home> {
                                                   const Addclient()));
                                     },
                                     text: 'Ajoutez',
-                                    options: const FFButtonOptions(
+                                    options: FFButtonOptions(
                                       width: 100,
                                       height: 30,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 0, 0),
-                                      iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0, 0, 0, 0),
-                                      color: Color(0xFFF1691D),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0, 0, 0, 0),
+                                      color: Config.colors.primaryColor,
                                       textStyle: TextStyle(
                                         fontFamily: 'Poppins',
-                                        color: Colors.white,
+                                        color: Config.colors.backgroundColor,
                                       ),
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1,
                                       ),
@@ -405,7 +407,7 @@ class _HomeState extends State<Home> {
                                 },
                                 itemBuilder: (BuildContext context) =>
                                     <PopupMenuEntry<SampleItem>>[
-                                   const PopupMenuItem<SampleItem>(
+                                  const PopupMenuItem<SampleItem>(
                                     value: SampleItem.itemOne,
                                     child: Text('Afficher'),
                                   ),
@@ -423,7 +425,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                    const FunInfoClient(),
+                      const FunInfoClient(),
                       const FunInfoClient(),
                       const FunInfoClient(),
                       const FunInfoClient(),
