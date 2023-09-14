@@ -58,6 +58,7 @@ class DatabaseService {
 
   //Fonction Récupération des ID de l'utilisateur
   Users? _userFromFirebase(User users) {
+    // ignore: unnecessary_null_comparison
     return users != null ? Users(idUtilisateur: users.email) : null;
   }
 }

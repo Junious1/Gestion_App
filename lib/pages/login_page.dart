@@ -1,5 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:gestion_app/pages/home.dart';
+import 'package:gestion_app/pages/home/home.dart';
 import 'package:gestion_app/services/authentification.dart';
 
 class login_page extends StatefulWidget {
@@ -13,6 +14,8 @@ class _login_pageState extends State<login_page> {
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
+    final emailTextController = TextEditingController();
+    final paswordTextController = TextEditingController();
     return GestureDetector(
       onTap: () => FocusScope.of(context).requestFocus(),
       child: Scaffold(
@@ -67,6 +70,7 @@ class _login_pageState extends State<login_page> {
                               // controller: _model.textController1,
                               autofocus: true,
                               obscureText: false,
+                              controller: emailTextController,
                               decoration: InputDecoration(
                                 labelText: 'Username',
                                 hintText: 'Nom d\'utilisateur',
@@ -117,7 +121,7 @@ class _login_pageState extends State<login_page> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 75, 25, 75, 0),
                             child: TextFormField(
-                              // controller: _model.textController2,
+                              controller: paswordTextController,
                               autofocus: true,
                               // obscureText: !_model.passwordVisibility,
                               decoration: InputDecoration(
@@ -158,20 +162,6 @@ class _login_pageState extends State<login_page> {
                                 contentPadding:
                                     const EdgeInsetsDirectional.fromSTEB(
                                         10, 0, 0, 0),
-                                // suffixIcon: InkWell(
-                                //   onTap: () => setState(
-                                //     () => _model.passwordVisibility =
-                                //         !_model.passwordVisibility,
-                                //   ),
-                                //   focusNode: FocusNode(skipTraversal: true),
-                                //   child: Icon(
-                                //     _model.passwordVisibility
-                                //         ? Icons.visibility_outlined
-                                //         : Icons.visibility_off_outlined,
-                                //     color: FlutterFlowTheme.of(context).primaryText,
-                                //     size: 20,
-                                //   ),
-                                // ),
                               ),
                               style: const TextStyle(
                                   fontWeight: FontWeight.normal),
@@ -186,18 +176,18 @@ class _login_pageState extends State<login_page> {
                                   300, 10, 20, 20),
                               child: ElevatedButton(
                                 onPressed: () async {
-                                  dynamic result = await _auth.SignInAnom();
-                                  if (result == null) {
-                                    print('Erreur lors de la connexion');
-                                  } else {
-                                    print('Connexion réussite ');
-                                    print(result);
-                                    Navigator.push(
-                                        context,
+                                  // Verification de l'utilisateur
+                                  User? user =
+                                      await _auth.loginUsingEmailPassword(
+                                          email: emailTextController.text,
+                                          password: paswordTextController.text,
+                                          context: context);
+                                  print(user);
+                                  if (user != null) {
+                                    Navigator.of(context).pushReplacement(
                                         MaterialPageRoute(
-                                            builder: (context) =>
-                                                const Home()));
-                                  }
+                                            builder: (context) => Home()));
+                                  } else {}
                                 },
                                 style: ElevatedButton.styleFrom(
                                   minimumSize: const Size(100, 45),

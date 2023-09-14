@@ -120,3 +120,12 @@ class _AddclientState extends State<Addclient> {
     );
   }
 }
+
+class AddClient extends StatelessWidget {
+  const AddClient({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
